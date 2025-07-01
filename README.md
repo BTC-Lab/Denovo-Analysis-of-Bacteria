@@ -44,25 +44,27 @@ conda install bioconda::blast
 
 **Usage**  
 
-Fastq quality checking and filtering
-This step involves checking of quality parameters for the sequences obtained from sequencer.
-The following checks are performed for an input fastq files.
-•	Base quality score distributions
-•	Average base content per read
-•	GC distribution in the reads
-Data Pre-Processing
-Before assembly, raw FASTQ files are pre-processed using AdapterRemoval v2. This step includes:
-•	Trimming adapter sequences from paired-end reads 
-•	Filtering reads: The pipeline removes any reads where either of the paired-end reads has an average quality score below 30.
-This ensures that only high-quality, adapter-free reads proceed to the assembly step.
-Command:
-Input reads files can be gzipped (or not), and in fastq format
-AdapterRemoval --file1 input_R1.fastq.gz --file2  input_R2.fastq.gz --trimqualities --minquality 30 --minlength 30 --trimwindows 30 --threads 30  --basename output_Prefix  --output1 output_Preprocessed_R1.fastq.gz --output2 output_Preprocessed_R2.fastq.gz –gzip
-
-De novo genome assembly
-Generate the De novo assembly using the unicycler assembler. 
-Assembly statistics can be generated using QUAST and the identification of  levels of conserved genes using BUSCO.
-Command:
+**Fastq quality checking and filtering** 
+  
+This step involves checking of quality parameters for the sequences obtained from sequencer.  
+The following checks are performed for an input fastq files.  
+•	Base quality score distributions  
+•	Average base content per read  
+•	GC distribution in the reads  
+**Data Pre-Processing**    
+Before assembly, raw FASTQ files are pre-processed using AdapterRemoval v2. This step includes:  
+•	Trimming adapter sequences from paired-end reads  
+•	Filtering reads: The pipeline removes any reads where either of the paired-end reads has an average quality score below 30.  
+This ensures that only high-quality, adapter-free reads proceed to the assembly step.  
+**Command:**    
+Input reads files can be gzipped (or not), and in fastq format  
+AdapterRemoval --file1 input_R1.fastq.gz --file2  input_R2.fastq.gz --trimqualities --minquality 30 --minlength 30 --trimwindows 30 --threads 30  --basename output_Prefix  --output1 output_Preprocessed_R1.fastq.gz --output2 output_Preprocessed_R2.fastq.gz –gzip  
+  
+**De novo genome assembly**  
+  
+Generate the De novo assembly using the unicycler assembler  
+Assembly statistics can be generated using QUAST and the identification of  levels of conserved genes using BUSCO  
+**Command:** 
 Input reads files can be gzipped (or not), and in fastq format
 unicycler -1 input_Preprocessed_R1.fastq.gz  -2  input_Preprocessed_R2.fastq.gz  --keep 0 --threads 50 -o Out
 quast.py input_Assembly.fasta -o output_Quast -t 30
