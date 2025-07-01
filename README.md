@@ -22,13 +22,17 @@ Blast: Gene Annotation
 Fastqc: Quality Checking   
 
 **Installation**  
-
+  
+```
 conda create -n Bacterial_ENV  
 conda activate Bacterial_ENV  
-
+```
+  
 **Install dependencies**   
 Tools are  available from conda  
-Installing using conda:  
+Installing using conda: 
+  
+```  
 AdapterRemoval v2  
 conda install -c bioconda adapterremoval  
 Unicycler  
@@ -41,7 +45,8 @@ Prodigal
 conda install bioconda::prodigal  
 Blast  
 conda install bioconda::blast  
-
+```
+  
 **Usage**  
 
 **Fastq quality checking and filtering** 
