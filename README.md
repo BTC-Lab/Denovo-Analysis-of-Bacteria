@@ -115,10 +115,10 @@ diamond blastp --db Uniprot_DB--query input_Proteins.faa --max-target-seqs 1 --o
 
 **Using UniProt IDs from a BLAST Search to Retrieve Protein Information**   
 
-After performing a BLAST search on the UniProt website, you'll obtain a list of UniProt accession numbers. These identifiers can be used to access detailed protein information, including protein names, source organisms, and functional annotations.  
+After performing a BLAST search on the UniProt website, obtain a list of UniProt accession numbers. These identifiers can be used to access detailed protein information, including protein names, source organisms, and functional annotations.  
   
 How It Works  
-UniProt offers an ID Mapping API that enables you to:  
+UniProt offers an ID Mapping API that enables:  
 • Submit a list of UniProt accession IDs  
 • Retrieve comprehensive annotation data for each corresponding protein  
   
