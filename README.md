@@ -80,7 +80,9 @@ Assembly statistics can be generated using QUAST and the identification of  leve
 Input reads files can be gzipped (or not), and in fastq format  
 ```  
 unicycler -1 input_Preprocessed_R1.fastq.gz  -2  input_Preprocessed_R2.fastq.gz  --keep 0 --threads 50 -o Out
+  
 quast.py input_Assembly.fasta -o output_Quast -t 30
+  
 busco -i input_Assembly.fasta -l bacteria_odb12 -o   --mode geno -c 60  
 ```
     
