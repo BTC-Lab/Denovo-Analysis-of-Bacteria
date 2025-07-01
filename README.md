@@ -89,9 +89,9 @@ prodigal -i input_Assembly.fasta -o output_Folder  -a output_Proteins.fasta -d o
   
 Briefly, perform the following steps for annotation.  
   
-•	Matching with UniProt database using BLASTX program
-•	Organism annotation
-•	Gene Ontology (GO) Annotation  
+•	Matching with UniProt database using BLASTX program  
+•	Organism annotation  
+•	Gene Ontology (GO) Annotation    
   
 **Matching with Uniprot database using BLASTX program**  
 Predicted genes are annotated by comparing them against the UniProt database using BLASTX with an E-value threshold of 1e-3. For each gene, the top BLASTX hit is selected based on query coverage, identity, similarity score, and functional description  
