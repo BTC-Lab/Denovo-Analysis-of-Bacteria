@@ -112,6 +112,16 @@ The gene ontology (GO) terms (Molecular Function (MF), Cellular Component (CC),B
 **Command:**  
   
 diamond blastp --db Uniprot_DB--query input_Proteins.faa --max-target-seqs 1 --outfmt 6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qcovhsp stitle --threads 60 --evalue 1e-3 --out output.tab  
+
+**Using UniProt IDs from a BLAST Search to Retrieve Protein Information**   
+
+After performing a BLAST search on the UniProt website, you'll obtain a list of UniProt accession numbers. These identifiers can be used to access detailed protein information, including protein names, source organisms, and functional annotations.  
+  
+How It Works  
+UniProt offers an ID Mapping API that enables you to:  
+• Submit a list of UniProt accession IDs  
+• Retrieve comprehensive annotation data for each corresponding protein  
+  
   
 
   
