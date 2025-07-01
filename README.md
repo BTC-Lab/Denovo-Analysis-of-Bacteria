@@ -51,12 +51,15 @@ The following checks are performed for an input fastq files.
   
 •	Base quality score distributions      
 •	Average base content per read   
-•	GC distribution in the reads   
+•	GC distribution in the reads  
+  
 **Data Pre-Processing**  
   
-Before assembly, raw FASTQ files are pre-processed using AdapterRemoval v2. This step includes:    
+Before assembly, raw FASTQ files are pre-processed using AdapterRemoval v2.    
+This step includes:      
 •	Trimming adapter sequences from paired-end reads      
-•	Filtering reads: The pipeline removes any reads where either of the paired-end reads has an average quality score below 30     
+•	Filtering reads: The pipeline removes any reads where either of the paired-end reads has an average quality score below 30  
+  
 This ensures that only high-quality, adapter-free reads proceed to the assembly step   
   
 **Command:**  
