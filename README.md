@@ -1,5 +1,5 @@
 **Denovo Analysis of Bacteria**    
-A bioinformatics pipeline for performing De novo genome assembly and analysis of bacteria from raw sequencing data. This project is designed to assist researchers and microbiologists in reconstructing bacterial genomes without a reference.  
+A bioinformatics pipeline for performing **De novo genome assembly and analysis of bacteria** from raw sequencing data. This project is designed to assist researchers and microbiologists in reconstructing bacterial genomes without a reference.  
   
 The Bioinformatics analysis pipeline for the De novo genome assembly is shown below.   
   
@@ -26,7 +26,7 @@ Fastqc: Quality Checking
 conda create -n Bacterial_ENV  
 conda activate Bacterial_ENV  
 
-Install dependencies  
+**Install dependencies**   
 Tools are  available from conda  
 Installing using conda:  
 AdapterRemoval v2  
