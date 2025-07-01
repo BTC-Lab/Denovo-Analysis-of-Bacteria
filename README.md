@@ -65,7 +65,8 @@ This ensures that only high-quality, adapter-free reads proceed to the assembly 
 **Command:**  
   
 Input reads files can be gzipped (or not), and in fastq format  
-  
+
+```  
 AdapterRemoval --file1 input_R1.fastq.gz --file2  input_R2.fastq.gz --trimqualities --minquality 30 --minlength 30 --trimwindows 30 --threads 30  --basename output_Prefix  --output1 output_Preprocessed_R1.fastq.gz --output2 output_Preprocessed_R2.fastq.gz –gzip
   
 **De novo genome assembly**    
@@ -76,7 +77,7 @@ Assembly statistics can be generated using QUAST and the identification of  leve
 **Command:**  
   
 Input reads files can be gzipped (or not), and in fastq format  
-  
+```  
 unicycler -1 input_Preprocessed_R1.fastq.gz  -2  input_Preprocessed_R2.fastq.gz  --keep 0 --threads 50 -o Out
 quast.py input_Assembly.fasta -o output_Quast -t 30
 busco -i input_Assembly.fasta -l bacteria_odb12 -o   --mode geno -c 60  
@@ -85,7 +86,7 @@ busco -i input_Assembly.fasta -l bacteria_odb12 -o   --mode geno -c 60
   
 Prediction of  CDSs from the unicycler assembled contigs using Prodigal  
 **Command**  
-  
+```  
 prodigal -i input_Assembly.fasta -o output_Folder  -a output_Proteins.fasta -d output_Proteins.fasta
     
 **Gene annotation**  
