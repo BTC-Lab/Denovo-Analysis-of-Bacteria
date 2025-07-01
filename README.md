@@ -68,7 +68,8 @@ Input reads files can be gzipped (or not), and in fastq format
 
 ```  
 AdapterRemoval --file1 input_R1.fastq.gz --file2  input_R2.fastq.gz --trimqualities --minquality 30 --minlength 30 --trimwindows 30 --threads 30  --basename output_Prefix  --output1 output_Preprocessed_R1.fastq.gz --output2 output_Preprocessed_R2.fastq.gz –gzip
-  
+```
+    
 **De novo genome assembly**    
   
 Generate the De novo assembly using the unicycler assembler    
@@ -81,14 +82,16 @@ Input reads files can be gzipped (or not), and in fastq format
 unicycler -1 input_Preprocessed_R1.fastq.gz  -2  input_Preprocessed_R2.fastq.gz  --keep 0 --threads 50 -o Out
 quast.py input_Assembly.fasta -o output_Quast -t 30
 busco -i input_Assembly.fasta -l bacteria_odb12 -o   --mode geno -c 60  
-  
+```
+    
 **Gene prediction**  
   
 Prediction of  CDSs from the unicycler assembled contigs using Prodigal  
 **Command**  
+  
 ```  
 prodigal -i input_Assembly.fasta -o output_Folder  -a output_Proteins.fasta -d output_Proteins.fasta
-    
+```    
 **Gene annotation**  
   
 Briefly, perform the following steps for annotation.  
@@ -111,9 +114,11 @@ The gene ontology (GO) terms (Molecular Function (MF), Cellular Component (CC),B
   
   
 **Command:**  
-  
-diamond blastp --db Uniprot_DB--query input_Proteins.faa --max-target-seqs 1 --outfmt 6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qcovhsp stitle --threads 60 --evalue 1e-3 --out output.tab  
 
+```  
+diamond blastp --db Uniprot_DB--query input_Proteins.faa --max-target-seqs 1 --outfmt 6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qcovhsp stitle --threads 60 --evalue 1e-3 --out output.tab  
+```
+  
 **Using UniProt IDs from a BLAST Search to Retrieve Protein Information**   
 
 After performing a BLAST search on the UniProt website, obtain a list of UniProt accession numbers. These identifiers can be used to access detailed protein information, including protein names, source organisms, and functional annotations.  
