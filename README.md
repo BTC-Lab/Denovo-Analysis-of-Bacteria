@@ -13,14 +13,14 @@ The Bioinformatics analysis pipeline for the De novo genome assembly is shown be
 **Technologies & Tools Used**   
   
 Python, Perl and Bash Scripting    
-AdapterRemoval v2
-Unicycler
-Quast
-Busco
-Prodigal
-Blast
-Fastqc
-
+AdapterRemoval v2  
+Unicycler  
+Quast  
+Busco  
+Prodigal  
+Blast  
+Fastqc  
+  
 **Installation**  
   
 ```
