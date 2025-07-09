@@ -99,7 +99,7 @@ Prediction of  CDSs from the unicycler assembled contigs using Prodigal
 **Command**  
   
 ```  
-prodigal -i input_Assembly.fasta -o output_Folder  -a output_Proteins.fasta -d output_Proteins.fasta
+prodigal -i input_Assembly.fasta -o output_Folder  -a output_Proteins.fasta -d output_Genes.fasta
 ```    
 **Gene annotation**  
   
