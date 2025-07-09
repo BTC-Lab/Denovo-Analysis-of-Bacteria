@@ -60,11 +60,13 @@ The following checks are performed for an input fastq files.
   
 **Data Pre-Processing**  
   
-Before assembly, raw FASTQ files are pre-processed using AdapterRemoval v2.    
-This step includes:      
+Before assembly, raw FASTQ files are pre-processed using AdapterRemoval v2.  
+  
+This step includes:    
+   
 •	Trimming adapter sequences from paired-end reads      
 •	Filtering reads: The pipeline removes any reads where either of the paired-end reads has an average quality score below 30  
-  
+    
 This ensures that only high-quality, adapter-free reads proceed to the assembly step   
   
 **Command:**  
@@ -72,7 +74,7 @@ This ensures that only high-quality, adapter-free reads proceed to the assembly 
 Input reads files can be gzipped (or not), and in fastq format  
 
 ```  
-AdapterRemoval --file1 input_R1.fastq.gz --file2  input_R2.fastq.gz --trimqualities --minquality 30 --minlength 30 --trimwindows 30 --threads <num_threads>  --basename output_Prefix  --output1 output_Preprocessed_R1.fastq.gz --output2 output_Preprocessed_R2.fastq.gz –gzip
+AdapterRemoval --file1 input_R1.fastq.gz --file2  input_R2.fastq.gz --trimqualities --minquality 30 --minlength 30 --trimwindows 30 --threads <num_threads>  --basename output_Prefix  --output1 output_Preprocessed_R1.fastq.gz --output2 output_Preprocessed_R2.fastq.gz --gzip
 ```
     
 **De novo genome assembly**    
