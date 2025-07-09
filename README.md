@@ -136,6 +136,7 @@ After performing a BLAST search on the UniProt website, obtain a list of UniProt
 How It Works 
   
 UniProt offers an ID Mapping API that enables:  
+  
 • Submit a list of UniProt accession IDs  
 • Retrieve comprehensive annotation data for each corresponding protein  
   
