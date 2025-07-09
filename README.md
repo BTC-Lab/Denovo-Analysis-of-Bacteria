@@ -113,6 +113,13 @@ Briefly, perform the following steps for annotation.
   
 Predicted genes are annotated by comparing them against the UniProt database using BLASTX with an E-value threshold of 1e-3. For each gene, the top BLASTX hit is selected based on query coverage, identity, similarity score, and functional description.  
 
+**Command:**  
+
+```  
+diamond blastp --db Uniprot_DB--query input_Proteins.faa --max-target-seqs 1 --outfmt 6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qcovhsp stitle --threads <num_threads> --evalue 1e-3 --out output.tab  
+```
+    
+
 **Using UniProt IDs from a BLAST Search to Retrieve Protein Information**   
 
 After performing a BLAST search on the UniProt database, obtain a list of UniProt accession numbers. These identifiers can be used to access detailed protein information, including protein names, source organisms, and functional annotations.  
@@ -134,12 +141,7 @@ Each gene’s top BLASTX hit is examined to extract the name of the correspondin
 The gene ontology (GO) terms (Molecular Function (MF), Cellular Component (CC),Biological Process (BP)) for genes are extracted from the BLASTX hits  
   
   
-**Command:**  
 
-```  
-diamond blastp --db Uniprot_DB--query input_Proteins.faa --max-target-seqs 1 --outfmt 6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qcovhsp stitle --threads <num_threads> --evalue 1e-3 --out output.tab  
-```
-  
 
   
   
