@@ -111,8 +111,19 @@ Briefly, perform the following steps for annotation.
   
 **Matching with Uniprot database using BLASTX program**  
   
-Predicted genes are annotated by comparing them against the UniProt database using BLASTX with an E-value threshold of 1e-3. For each gene, the top BLASTX hit is selected based on query coverage, identity, similarity score, and functional description  
+Predicted genes are annotated by comparing them against the UniProt database using BLASTX with an E-value threshold of 1e-3. For each gene, the top BLASTX hit is selected based on query coverage, identity, similarity score, and functional description.  
+
+**Using UniProt IDs from a BLAST Search to Retrieve Protein Information**   
+
+After performing a BLAST search on the UniProt website, obtain a list of UniProt accession numbers. These identifiers can be used to access detailed protein information, including protein names, source organisms, and functional annotations.  
   
+How It Works 
+  
+UniProt offers an ID Mapping API that enables:  
+  
+• Submit a list of UniProt accession IDs  
+• Retrieve comprehensive annotation data for each corresponding protein    
+   
 **Organism annotation**   
    
 Each gene’s top BLASTX hit is examined to extract the name of the corresponding organism  
@@ -129,16 +140,7 @@ The gene ontology (GO) terms (Molecular Function (MF), Cellular Component (CC),B
 diamond blastp --db Uniprot_DB--query input_Proteins.faa --max-target-seqs 1 --outfmt 6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qcovhsp stitle --threads <num_threads> --evalue 1e-3 --out output.tab  
 ```
   
-**Using UniProt IDs from a BLAST Search to Retrieve Protein Information**   
 
-After performing a BLAST search on the UniProt website, obtain a list of UniProt accession numbers. These identifiers can be used to access detailed protein information, including protein names, source organisms, and functional annotations.  
-  
-How It Works 
-  
-UniProt offers an ID Mapping API that enables:  
-  
-• Submit a list of UniProt accession IDs  
-• Retrieve comprehensive annotation data for each corresponding protein  
   
   
 
