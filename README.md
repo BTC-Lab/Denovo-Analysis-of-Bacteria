@@ -88,7 +88,7 @@ unicycler -1 input_Preprocessed_R1.fastq.gz  -2  input_Preprocessed_R2.fastq.gz 
   
 quast.py input_Assembly.fasta -o output_Quast -t <num_threads>
   
-busco -i input_Assembly.fasta -l bacteria_odb12 -o   --mode geno -c <num_threads> 
+busco -i input_Assembly.fasta -l bacteria_odb12 -o output_Busco  --mode geno -c <num_threads> 
 ```
     
 **Gene prediction**  
