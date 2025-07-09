@@ -79,8 +79,7 @@ AdapterRemoval --file1 input_R1.fastq.gz --file2  input_R2.fastq.gz --trimqualit
     
 **De novo genome assembly**    
   
-Generate the De novo assembly using the unicycler assembler    
-Assembly statistics can be generated using QUAST and the identification of  levels of conserved genes using BUSCO   
+Generate the De novo assembly using the unicycler assembler. Assembly statistics can be generated using QUAST and the identification of  levels of conserved genes using BUSCO     
   
 **Command:**  
   
