@@ -110,6 +110,7 @@ Briefly, perform the following steps for annotation.
 •	Gene Ontology (GO) Annotation    
   
 **Matching with Uniprot database using BLASTX program**  
+  
 Predicted genes are annotated by comparing them against the UniProt database using BLASTX with an E-value threshold of 1e-3. For each gene, the top BLASTX hit is selected based on query coverage, identity, similarity score, and functional description  
   
 **Organism annotation**   
@@ -132,7 +133,8 @@ diamond blastp --db Uniprot_DB--query input_Proteins.faa --max-target-seqs 1 --o
 
 After performing a BLAST search on the UniProt website, obtain a list of UniProt accession numbers. These identifiers can be used to access detailed protein information, including protein names, source organisms, and functional annotations.  
   
-How It Works  
+How It Works 
+  
 UniProt offers an ID Mapping API that enables:  
 • Submit a list of UniProt accession IDs  
 • Retrieve comprehensive annotation data for each corresponding protein  
